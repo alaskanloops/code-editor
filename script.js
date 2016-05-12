@@ -24,6 +24,11 @@ $(".panel").width(($(window).width() / 2) - 10);
 
 
 $("#htmlPanel").on('change keyup paste', function () {
-    $("iframe").contents().find("html").html($("#htmlPanel").val());
+    $("iframe").contents().find("html").html(
+        "<html><head><style type='text/css'>" +
+        $("#cssPanel").val() +
+        "</style> </head><body>" +
+        $("#htmlPanel").val() +
+        "</body></html>");
 
 });
