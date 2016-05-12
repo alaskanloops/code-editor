@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Johannes's Amazing Code Editor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="top-bar">
+            <div id="logo">
+                Code Editor
+            </div>
+            <div id="button-container">
+                <div class="toggle-button active" id="html-button">HTML</div>
+                <div class="toggle-button" id="css-button">CSS</div>
+                <div class="toggle-button" id="js-button">Javascript</div>
+                <div class="toggle-button active" id="output-button">Output</div>
+            </div>
+        </div>
+        <div id="content">
+            <textarea id="htmlPanel" class="panel">Hi There</textarea>
+            <textarea id="cssPanel" class="panel hidden">p {color: red}</textarea>
+            <textarea id="jsPanel" class="panel hidden">alert("hi there");</textarea>
+            <iframe id="outputPanel" class="panel"></iframe>
+        </div>
+    </div>
+<script>
+//    for(i=0;i<100;)console.log((++i%3?'':'Fizz')+(i%5?'':'Buzz')||i)
+    for (var i = 0; i <= 100; i ++) {
+        if (i%15 == 0)
+            console.log("FizzBuzz");
+         else if (i%3 == 0)
+            console.log("Fizz");
+         else if (i%5 == 0)
+            console.log("Buzz");
+        else
+                console.log(i);
+    }
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
